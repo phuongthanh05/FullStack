@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Cấu hình API cho từng service
 export const userApi = axios.create({
-  baseURL: 'http://192.168.30.57:5000/api',  // User Service
+  baseURL: 'http://172.16.21.167:5000/api',  // User Service
   headers: { 'Content-Type': 'application/json' }
 });
 
@@ -12,7 +12,7 @@ export const orderApi = axios.create({
 });
 
 export const productApi = axios.create({
-  baseURL: 'http://192.168.29.244:5001/api',  // Product Service
+  baseURL: 'http://172.16.22.42:5001/api',  // Product Service
   headers: { 'Content-Type': 'application/json' }
 });
 
