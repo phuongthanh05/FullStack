@@ -1,112 +1,161 @@
 <template>
   <div class="page-root">
 
-    <!-- ===== DASHBOARD BACKGROUND ===== -->
+    <!-- ===== LANDING PAGE BACKGROUND (SmartStockDNU) ===== -->
     <div class="dashboard-bg" aria-hidden="true">
-      <div class="dashboard-container">
-        <div class="dashboard-header">
-          <h1 class="dashboard-title">
-            📊 Tổng quan hệ thống
-            <span class="badge bg-primary">2025</span>
-          </h1>
-          <p class="text-muted">Chào mừng bạn trở lại! Dưới đây là thống kê tổng hợp từ hệ thống.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="stat-card user-card">
-              <div class="stat-icon">👥</div>
-              <div class="stat-content">
-                <h3 class="stat-value">128</h3>
-                <p class="stat-label">Người dùng</p>
-                <div class="stat-detail">
-                  <span class="sbadge">👑 Admin: 5</span>
-                  <span class="sbadge">👤 Staff: 123</span>
-                </div>
-              </div>
-              <div class="stat-trend">📈 +12%</div>
+      <div class="landing-static">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+          <div class="container">
+            <div class="logo">
+              <span class="logo-icon">🏢</span>
+              <span class="logo-text">SmartStockDNU</span>
+            </div>
+            <div class="nav-menu">
+              <span class="nav-link active">Trang chủ</span>
+              <span class="nav-link">Tính năng</span>
+              <span class="nav-link">Giới thiệu</span>
+              <span class="nav-link">Liên hệ</span>
+            </div>
+            <div class="nav-buttons">
+              <button class="btn-login">Đăng nhập</button>
+              <button class="btn-register">Đăng ký</button>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="stat-card order-card">
-              <div class="stat-icon">🛒</div>
-              <div class="stat-content">
-                <h3 class="stat-value">3,420</h3>
-                <p class="stat-label">Đơn hàng</p>
-                <div class="stat-detail"><span class="sbadge">125.000.000 ₫</span></div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-icon">🚀</span>
+                <span class="badge-text">v2.0 Mới ra mắt</span>
               </div>
-              <div class="stat-trend">📈 +8%</div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="stat-card product-card">
-              <div class="stat-icon">📦</div>
-              <div class="stat-content">
-                <h3 class="stat-value">156</h3>
-                <p class="stat-label">Sản phẩm</p>
-                <div class="stat-detail"><span class="sbadge">📊 Tồn kho: 2,340</span></div>
-              </div>
-              <div class="stat-trend">📈 +5%</div>
-            </div>
-          </div>
-        </div>
-        <div class="row g-4 mt-2">
-          <div class="col-md-7">
-            <div class="chart-card">
-              <div class="chart-header">
-                <h5 class="chart-title">📈 Doanh thu theo tháng</h5>
-                <p class="chart-subtitle">Biểu đồ doanh thu 12 tháng gần nhất</p>
-              </div>
-              <div class="chart-body">
-                <div class="fake-bars">
-                  <div class="fake-bar" style="height:55%"><span class="bar-label">T1</span></div>
-                  <div class="fake-bar" style="height:65%"><span class="bar-label">T2</span></div>
-                  <div class="fake-bar" style="height:50%"><span class="bar-label">T3</span></div>
-                  <div class="fake-bar" style="height:80%"><span class="bar-label">T4</span></div>
-                  <div class="fake-bar" style="height:70%"><span class="bar-label">T5</span></div>
-                  <div class="fake-bar" style="height:90%"><span class="bar-label">T6</span></div>
-                  <div class="fake-bar" style="height:75%"><span class="bar-label">T7</span></div>
-                  <div class="fake-bar" style="height:85%"><span class="bar-label">T8</span></div>
-                  <div class="fake-bar" style="height:60%"><span class="bar-label">T9</span></div>
-                  <div class="fake-bar" style="height:95%"><span class="bar-label">T10</span></div>
-                  <div class="fake-bar" style="height:88%"><span class="bar-label">T11</span></div>
-                  <div class="fake-bar" style="height:100%"><span class="bar-label">T12</span></div>
-                </div>
+              <h1 class="hero-title">
+                Quản lý bán hàng &amp;<br>
+                <span class="highlight">Kho hàng</span> thông minh
+              </h1>
+              <p class="hero-description">
+                Quản lý sản phẩm, tồn kho, đơn hàng, khách hàng, nhà cung cấp trong một hệ thống duy nhất.
+                Giải pháp toàn diện cho doanh nghiệp vừa và nhỏ.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn-primary">Dùng thử miễn phí</button>
+                <button class="btn-secondary">Xem demo</button>
               </div>
             </div>
-          </div>
-          <div class="col-md-5">
-            <div class="chart-card">
-              <div class="chart-header">
-                <h5 class="chart-title">🏆 Sản phẩm bán chạy</h5>
-                <p class="chart-subtitle">Top 5 sản phẩm có doanh số cao nhất</p>
-              </div>
-              <div class="chart-body donut-wrap">
-                <div class="donut-ring"></div>
-                <div class="donut-labels">
-                  <div class="dlabel"><span class="dot" style="background:#3b82f6"></span>iPhone 15</div>
-                  <div class="dlabel"><span class="dot" style="background:#10b981"></span>Samsung S24</div>
-                  <div class="dlabel"><span class="dot" style="background:#f59e0b"></span>Laptop Dell</div>
-                  <div class="dlabel"><span class="dot" style="background:#ef4444"></span>Sony WH-1000</div>
-                  <div class="dlabel"><span class="dot" style="background:#8b5cf6"></span>iPad Pro</div>
+            <div class="hero-image">
+              <div class="image-wrapper">
+                <div class="dashboard-preview">
+                  <div class="preview-header">
+                    <div class="preview-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="preview-title">Dashboard Overview</div>
+                  </div>
+                  <div class="preview-content">
+                    <div class="preview-stats">
+                      <div class="stat">
+                        <span class="stat-value">156</span>
+                        <span class="stat-label">Sản phẩm</span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value">342</span>
+                        <span class="stat-label">Đơn hàng</span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value">89</span>
+                        <span class="stat-label">Khách hàng</span>
+                      </div>
+                    </div>
+                    <div class="preview-chart">
+                      <div class="chart-bar" style="height: 30%"></div>
+                      <div class="chart-bar" style="height: 45%"></div>
+                      <div class="chart-bar" style="height: 38%"></div>
+                      <div class="chart-bar" style="height: 60%"></div>
+                      <div class="chart-bar" style="height: 52%"></div>
+                      <div class="chart-bar" style="height: 75%"></div>
+                      <div class="chart-bar active" style="height: 85%"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-12">
-            <div class="chart-card">
-              <div class="chart-header">
-                <h5 class="chart-title">🔄 Hoạt động gần đây</h5>
+        </header>
+
+        <!-- Statistics -->
+        <section class="statistics">
+          <div class="container">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">156+</div>
+                <div class="stat-label">Sản phẩm</div>
+                <div class="stat-trend">↑ 12% tháng này</div>
               </div>
-              <div class="activity-body">
-                <div class="activity-item"><span class="activity-icon">✅</span><div class="activity-content"><strong>Đăng nhập thành công</strong><small>Hôm nay, 09:12</small></div></div>
-                <div class="activity-item"><span class="activity-icon">📊</span><div class="activity-content"><strong>Dashboard đã được tải</strong><small>Dữ liệu được cập nhật mới nhất</small></div></div>
-                <div class="activity-item"><span class="activity-icon">🛒</span><div class="activity-content"><strong>Đơn hàng mới #3421</strong><small>2 phút trước</small></div></div>
+              <div class="stat-card">
+                <div class="stat-number">3.4k+</div>
+                <div class="stat-label">Đơn hàng</div>
+                <div class="stat-trend">↑ 8.3% tháng này</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Hài lòng</div>
+                <div class="stat-trend">↑ 5.2% tháng này</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Hỗ trợ</div>
+                <div class="stat-trend">Luôn sẵn sàng</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">Tính năng nổi bật</h2>
+              <p class="section-subtitle">Mọi thứ bạn cần để vận hành doanh nghiệp một cách chuyên nghiệp</p>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3 class="feature-title">Quản lý sản phẩm</h3>
+                <p class="feature-desc">Quản lý danh mục sản phẩm, theo dõi tồn kho, cảnh báo hàng sắp hết</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <h3 class="feature-title">Quản lý đơn hàng</h3>
+                <p class="feature-desc">Xử lý đơn hàng nhanh chóng, theo dõi công nợ và thanh toán</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title">Quản lý khách hàng</h3>
+                <p class="feature-desc">Lưu trữ thông tin khách hàng, lịch sử mua hàng, công nợ</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🏪</div>
+                <h3 class="feature-title">Quản lý kho hàng</h3>
+                <p class="feature-desc">Cập nhật tồn kho thời gian thực, nhập/xuất kho dễ dàng</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Báo cáo thông minh</h3>
+                <p class="feature-desc">Thống kê doanh thu, biểu đồ trực quan, báo cáo xuất Excel</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Phân quyền chi tiết</h3>
+                <p class="feature-desc">Admin, Nhân viên bán hàng, Thủ kho - mỗi vai trò có quyền riêng</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
 
@@ -333,13 +382,11 @@ const handleRegister = async () => {
 
 // Xử lý đăng nhập/đăng ký bằng Google
 const handleGoogleAuth = () => {
-  // Tích hợp Google OAuth — cấu hình theo backend của bạn
   window.location.href = `${import.meta.env.VITE_API_BASE_URL}/auth/google?prompt=select_account`;
 };
 
 // Xử lý đăng nhập/đăng ký bằng Facebook
 const handleFacebookAuth = () => {
-  // Tích hợp Facebook OAuth — cấu hình theo backend của bạn
   window.location.href = `${import.meta.env.VITE_API_BASE_URL}/auth/facebook`;
 };
 </script>
@@ -356,69 +403,128 @@ const handleFacebookAuth = () => {
   justify-content: center;
 }
 
-/* ===== DASHBOARD BACKGROUND ===== */
+/* ===== DASHBOARD BACKGROUND (Landing static) ===== */
 .dashboard-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #f5f7fa;
   overflow: hidden;
   pointer-events: none;
   user-select: none;
 }
-.dashboard-container { padding: 24px; min-height: 100vh; }
-.dashboard-header { margin-bottom: 24px; }
-.dashboard-title { font-size: 26px; font-weight: 700; color: #1e293b; margin-bottom: 6px; }
-.badge { background: #3b82f6; color: white; padding: 3px 10px; border-radius: 10px; font-size: 12px; margin-left: 8px; }
-.text-muted { color: #64748b; font-size: 14px; margin: 0; }
 
-.row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
-.col-md-4 { width: 33.33%; padding: 0 10px; box-sizing: border-box; }
-.col-md-5 { width: 41.66%; padding: 0 10px; box-sizing: border-box; }
-.col-md-7 { width: 58.33%; padding: 0 10px; box-sizing: border-box; }
-.col-12 { width: 100%; padding: 0 10px; box-sizing: border-box; }
-.g-4 > * { margin-bottom: 20px; }
-.mt-2 { margin-top: 8px; }
-.mt-4 { margin-top: 20px; }
-
-.stat-card {
-  border-radius: 18px; padding: 18px;
-  display: flex; align-items: center; gap: 14px;
-  color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.landing-static {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #faf9ff;
+  color: #051a3e;
+  height: 100vh;
+  overflow: hidden;
 }
-.user-card { background: linear-gradient(135deg, #667eea, #764ba2); }
-.order-card { background: linear-gradient(135deg, #11998e, #38ef7d); }
-.product-card { background: linear-gradient(135deg, #f2994a, #f2c94c); }
-.stat-icon { font-size: 40px; }
-.stat-content { flex: 1; }
-.stat-value { font-size: 28px; font-weight: 700; margin: 0; line-height: 1.1; }
-.stat-label { font-size: 13px; opacity: 0.9; margin: 4px 0 0 0; }
-.stat-detail { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
-.sbadge { font-size: 10px; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 10px; }
-.stat-trend { font-size: 12px; opacity: 0.85; white-space: nowrap; }
 
-.chart-card { background: white; border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.07); overflow: hidden; }
-.chart-header { padding: 16px 20px; border-bottom: 1px solid #e2e8f0; }
-.chart-title { font-size: 16px; font-weight: 600; color: #1e293b; margin: 0; }
-.chart-subtitle { font-size: 12px; color: #64748b; margin: 3px 0 0 0; }
-.chart-body { padding: 16px 20px; }
+.landing-static * { box-sizing: border-box; }
 
-.fake-bars { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding-bottom: 20px; }
-.fake-bar { flex: 1; background: linear-gradient(to top, #3b82f6, #93c5fd); border-radius: 4px 4px 0 0; position: relative; min-height: 10px; }
-.bar-label { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); font-size: 9px; color: #94a3b8; white-space: nowrap; }
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-.donut-wrap { display: flex; align-items: center; gap: 20px; }
-.donut-ring { width: 100px; height: 100px; border-radius: 50%; border: 18px solid transparent; background: conic-gradient(#3b82f6 0deg 163deg, #10b981 163deg 300deg, #f59e0b 300deg 391deg, #ef4444 391deg 499deg, #8b5cf6 499deg 360deg) border-box; flex-shrink: 0; }
-.donut-labels { display: flex; flex-direction: column; gap: 6px; }
-.dlabel { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #334155; }
-.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+/* Navbar */
+.navbar {
+  background: rgba(250, 249, 255, 0.95);
+  border-bottom: 1px solid rgba(195, 198, 214, 0.3);
+  padding: 16px 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon { font-size: 28px; }
+.logo-text { font-size: 18px; font-weight: 700; color: #003d9b; }
+.nav-menu { display: flex; gap: 32px; }
+.nav-link { color: #434654; font-weight: 500; }
+.nav-link.active { color: #003d9b; border-bottom: 2px solid #003d9b; padding-bottom: 4px; }
+.nav-buttons { display: flex; gap: 12px; }
+.btn-login, .btn-register { padding: 8px 24px; border-radius: 8px; font-weight: 600; border: none; }
+.btn-login { background: transparent; border: 1px solid #003d9b; color: #003d9b; }
+.btn-register { background: #003d9b; color: white; }
 
-.activity-body { padding: 0; }
-.activity-item { display: flex; align-items: center; gap: 12px; padding: 10px 20px; border-bottom: 1px solid #f1f5f9; }
-.activity-icon { font-size: 20px; }
-.activity-content { display: flex; justify-content: space-between; align-items: center; flex: 1; flex-wrap: wrap; }
-.activity-content strong { color: #1e293b; font-size: 13px; }
-.activity-content small { color: #64748b; font-size: 11px; }
+/* Hero */
+.hero {
+  padding: 60px 0 40px;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 82, 204, 0.05) 0%, #faf9ff 70%);
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.hero-content { flex: 1; min-width: 300px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0, 82, 204, 0.1); padding: 6px 14px; border-radius: 30px; margin-bottom: 24px;
+}
+.badge-icon { font-size: 14px; }
+.badge-text { font-size: 13px; font-weight: 500; color: #0052cc; }
+.hero-title { font-size: 40px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; color: #051a3e; }
+.highlight { color: #0052cc; }
+.hero-description { font-size: 16px; line-height: 1.6; color: #434654; margin-bottom: 32px; max-width: 500px; }
+.hero-buttons { display: flex; gap: 16px; }
+.btn-primary, .btn-secondary { padding: 14px 32px; border-radius: 12px; font-weight: 600; border: none; }
+.btn-primary { background: #0052cc; color: white; box-shadow: 0 4px 12px rgba(0, 82, 204, 0.2); }
+.btn-secondary { background: transparent; border: 1px solid #c3c6d6; color: #051a3e; }
+
+.hero-image { flex: 1; min-width: 300px; }
+.image-wrapper {
+  background: white; border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden; border: 1px solid rgba(195, 198, 214, 0.3);
+}
+.dashboard-preview { padding: 16px; }
+.preview-header {
+  display: flex; align-items: center; gap: 12px;
+  padding-bottom: 16px; border-bottom: 1px solid #e9edff;
+}
+.preview-dots { display: flex; gap: 6px; }
+.preview-dots span { width: 10px; height: 10px; border-radius: 50%; background: #c3c6d6; }
+.preview-title { font-size: 12px; color: #737685; }
+.preview-content { padding-top: 16px; }
+.preview-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.stat { text-align: center; }
+.stat-value { display: block; font-size: 24px; font-weight: 700; color: #003d9b; }
+.stat-label { font-size: 12px; color: #737685; }
+.preview-chart { display: flex; align-items: flex-end; gap: 12px; height: 120px; }
+.chart-bar { flex: 1; background: rgba(0, 82, 204, 0.2); border-radius: 6px 6px 0 0; }
+.chart-bar.active { background: #0052cc; }
+
+/* Statistics */
+.statistics { padding: 40px 0; background: white; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat-card {
+  text-align: center; padding: 24px; background: #faf9ff;
+  border-radius: 20px; border: 1px solid rgba(195, 198, 214, 0.2);
+}
+.stat-number { font-size: 36px; font-weight: 800; color: #003d9b; }
+.statistics .stat-label { font-size: 14px; color: #434654; margin: 8px 0; }
+.stat-trend { font-size: 12px; color: #10b981; }
+
+/* Features */
+.features { padding: 60px 0; background: #faf9ff; }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-title { font-size: 32px; font-weight: 700; color: #051a3e; margin-bottom: 12px; }
+.section-subtitle { font-size: 16px; color: #434654; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.feature-card {
+  background: white; padding: 32px 24px; border-radius: 20px;
+  text-align: center; border: 1px solid rgba(195, 198, 214, 0.2);
+}
+.feature-icon { font-size: 48px; margin-bottom: 20px; }
+.feature-title { font-size: 18px; font-weight: 600; color: #051a3e; margin-bottom: 12px; }
+.feature-desc { font-size: 14px; color: #737685; line-height: 1.5; }
 
 /* ===== OVERLAY ===== */
 .overlay {
@@ -492,9 +598,9 @@ const handleFacebookAuth = () => {
   padding: 28px 24px;
   text-align: center;
 }
-.logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; }
-.logo-icon { font-size: 32px; }
-.logo-text { font-size: 17px; font-weight: 700; color: white; letter-spacing: 0.5px; }
+.auth-header .logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.auth-header .logo-icon { font-size: 32px; }
+.auth-header .logo-text { font-size: 17px; font-weight: 700; color: white; letter-spacing: 0.5px; }
 
 .auth-tabs { display: flex; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 4px; gap: 4px; }
 .tab-btn { flex: 1; padding: 9px; border: none; background: transparent; color: #94a3b8; font-size: 15px; font-weight: 600; cursor: pointer; border-radius: 8px; transition: all 0.25s; }
